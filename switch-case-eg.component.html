@@ -1,0 +1,20 @@
+<h4>NgSwitch</h4>
+<ul *ngFor="let person of people"
+    [ngSwitch]="person.country">
+  <li *ngSwitchCase="'UK'"
+      style="color: red;">
+    {{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+        style="color:blue;">
+    {{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'HK'"
+        style="color:purple;">
+    {{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchDefault
+    style="color: rgb(34, 82, 3);">
+    {{ person.name }} ({{ person.country }})
+  </li>
+</ul>
